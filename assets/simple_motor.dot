@@ -1,0 +1,16 @@
+digraph {
+    rankdir=LR;
+    size="8,5"
+
+    node [shape = point ]; start_point
+    node [shape = point ]; end_point
+
+    node [shape = ellipse];
+
+    start_point -> init
+    stopped -> end_point
+
+    init -> running [label="start"]
+    running -> running [label="running"]
+    running -> stopped [label="stop"]
+}
